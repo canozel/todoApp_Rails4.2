@@ -1,4 +1,13 @@
 <%= form_for(Todo.new) do |f| %>
-    İçerik: <%= f.text_field :content %>
-    <%= f.submit "Kaydet" %>
+<div class="form-group">  
+    <label for="exampleInputEmail1">İçerik: </label>
+    <div class="row">
+      <div class="col-md-10">
+        <%= f.text_field :content, class: "form-control" %>
+      </div>
+      <div class="col-md-2">
+        <%= f.submit "Kaydet",class: "btn btn-default" %>
+      </div>
+    </div>
+  </div>
 <% end %>
