@@ -1,0 +1,8 @@
+<%= link_to "Çıkış Yap", destroy_user_session_path, method: :delete %>
+
+<%= render 'form' %> 
+
+<% @todos.each do |todo| %> 
+  <%= todo.content %> - <%= link_to 'Sil', todo, method: :delete, data: {confirm: "Bak Emin misin ?"} %> </br>
+<% end %>
+
